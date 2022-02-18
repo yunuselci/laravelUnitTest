@@ -14,6 +14,16 @@ class WeatherTest extends TestCase
      *
      * @return void
      */
+
+    public function test_get_request_id(){
+        $response = $this->get('/api/weathers/3');
+        $response
+            ->assertStatus(200)
+            ->assertJson([
+                'city'=> 'Istanbul'
+            ]);
+    }
+
     public function test_get_request()
     {
         $user = User::factory()->create();
