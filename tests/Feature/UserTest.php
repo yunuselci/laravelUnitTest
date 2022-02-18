@@ -10,7 +10,7 @@ use App\Models\User;
 
 class UserTest extends TestCase
 {
-    /*
+
     public function test_register()
     {
         $response = $this->postJson('/api/register',[
@@ -65,7 +65,7 @@ class UserTest extends TestCase
 
 
     }
-*/
+
     public function test_auth()
     {
         $user = User::factory()->create();
